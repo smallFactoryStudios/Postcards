@@ -14,14 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mailButton: UIButton!
     
     @IBAction func sendMailBtn(sender: UIButton) {
         messageLabel.text = messageTextField.text;
         messageLabel.hidden = false
         
-        messageTextField.resignFirstResponder()
+        nameLabel.text = nameTextField.text;
+        nameLabel.hidden = false
+        
         messageLabel.textColor = UIColor.redColor()
+        nameLabel.textColor = UIColor.blueColor()
+        
+        messageTextField.resignFirstResponder()
+
         
         nameTextField.text = ""
         messageTextField.text = ""
